@@ -6,7 +6,7 @@ UICollectionView extension for showing beautiful grid!
 ## Sample
 ![sample](sample.gif)
 <br /><br />
-Demo is [here]()!
+If you execute sample, clone or download this repository and open demo project.
 
 ## Usage
 
