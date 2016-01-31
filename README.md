@@ -27,8 +27,9 @@ If collectionView's frame changed by Autolayout, call `adaptBeautifulGrid:gridLi
 ```swift
 override func viewDidLayoutSubviews() {
     super.viewDidLayoutSubviews()
+    view.layoutIfNeeded() // need to call before update collection view layout.
+
     collectionView.adaptBeautifulGrid(4, gridLineSpace: 2.0)
-    view.layoutIfNeeded()
 }
 ```
 
@@ -41,10 +42,11 @@ If Device'rotation changed, call `adaptBeautifulGrid:gridLineSpace(:sectionInset
 ```swift
 override func viewDidLayoutSubviews() {
     super.viewDidLayoutSubviews()
+    view.layoutIfNeeded() // need to call before update collection view layout.
+
     let isLandscape = UIDeviceOrientationIsLandscape(UIDevice.currentDevice().orientation)
     let perRow = 4 + (isLandscape ? 2 : 0)
     collectionView.adaptBeautifulGrid(perRow, gridLineSpace: 2.0)
-    view.layoutIfNeeded()
 }
 ```
 
