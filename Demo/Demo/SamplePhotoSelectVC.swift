@@ -42,8 +42,7 @@ class SamplePhotoSelectVC: UIViewController {
         let row = Int(rowStepper.value) + (isLandscape ? 2 : 0)
         collectionView.adaptBeautifulGrid(
             row,
-            gridLineSpace: CGFloat(spaceStepper.value),
-            sectionInset: UIEdgeInsetsMake(0, 10, 0, 10))
+            gridLineSpace: CGFloat(spaceStepper.value))
     }
     func updateLabels() {
         rowLabel.text = "\(rowStepper.value)"
